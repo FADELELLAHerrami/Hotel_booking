@@ -1,1 +1,13 @@
 // Specific CSS for your home-page
+
+.conatiner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 100px;
+  gap: 100px;
+}
+
+.container > .content1 {
+  color: red;
+  background-color: red;
+}
