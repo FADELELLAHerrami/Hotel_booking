@@ -1,0 +1,14 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+  <% @rooms.each do |room| %>
+    <div class="col mb-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title"><%= room.hotel.name %></h5>
+          <p class="card-text">Capacité : <%= room.capacity %></p>
+          <p class="card-text">Prix par nuit : <%= room.price_per_night %></p>
+          <a href="#" class="btn btn-primary">Réserver</a>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

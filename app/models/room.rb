@@ -1,4 +1,5 @@
 class Room < ApplicationRecord
+  has_one_attached :photo
   # Association
   belongs_to :hotel
   has_many :bookings, dependent: :destroy
