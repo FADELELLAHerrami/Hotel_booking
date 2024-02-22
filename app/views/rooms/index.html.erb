@@ -1,12 +1,14 @@
-<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3" style="padding: 70px;">
   <% @rooms.each do |room| %>
     <div class="col mb-4">
       <div class="card h-100">
         <div class="card-body">
-          <h5 class="card-title"><%= room.hotel.name %></h5>
+          <h5 class="card-title"><%= room.hotel.name %> / Room <%= room.id %></h5>
           <p class="card-text">Capacité : <%= room.capacity %></p>
-          <p class="card-text">Prix par nuit : <%= room.price_per_night %></p>
-          <a href="#" class="btn btn-primary">Réserver</a>
+          
+          <p class="card-text">Prix par nuit : <%= room.price_per_night %> DH</p>
+          <%= link_to "More", room_path(room.id), class: "btn", style: "background-color: #67B6BB;" %>
+
         </div>
       </div>
     </div>
